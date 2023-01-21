@@ -18,7 +18,7 @@ import os
 CHANNEL = os.environ.get('CHANNEL', "")
 STRING = os.environ.get("STRING", "")
 ADMIN = int(os.environ.get("ADMIN", 1484670284))
-bot_username = os.environ.get("BOT_USERNAME","GangsterBaby_renamer_BOT")
+bot_username = os.environ.get("BOT_USERNAME")
 log_channel = int(os.environ.get("LOG_CHANNEL", ""))
 token = os.environ.get('TOKEN', '')
 botid = token.split(':')[0]
@@ -50,9 +50,8 @@ async def start(client, message):
         await message.reply_photo(photo=LAZY_PIC,
                                 caption=txt,
                                 reply_markup=InlineKeyboardMarkup(
-                                      [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/")],
-                                      [InlineKeyboardButton("Support Group", url='https://t.me/'),
-                                      [InlineKeyboardButton("☕ Buy Me A Coffee ☕", url='https://')]
+                                      [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/mr_invisible_bots")],
+                                      [InlineKeyboardButton("Support Group", url='https://t.me/mr_invisible_bots_support'),
                                       ]))
         return
     if id:
@@ -62,8 +61,8 @@ async def start(client, message):
                 await message.reply_photo(photo=LAZY_PIC,
                                          caption=txt,
                                          reply_markup=InlineKeyboardMarkup(
-                                             [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/")],
-                                              [InlineKeyboardButton("Support Group", url='https://t.me/'),
+                                             [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/mr_invisible_bots")],
+                                              [InlineKeyboardButton("Support Group", url='https://t.me/mr_invisible_bots_support'),
                                           ]))
             except:
                 return
@@ -79,8 +78,8 @@ async def start(client, message):
 	**Document Or Video** and enter new filename to rename it__
 	""", reply_to_message_id=message.id,
                                      reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/")]
-                                          [InlineKeyboardButton("Support Group", url='https://t.me/LazyPrincessSupport'),
+                                         [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/mr_invisible_bots")]
+                                          [InlineKeyboardButton("Support Group", url='https://t.me/mr_invisible_bots_support'),
                                           ]))
     
 
@@ -118,8 +117,8 @@ async def send_doc(client, message):
     except:
         await message.reply_text(text=f"Hello dear {message.from_user.first_name}  **we are currently working on this issue**\n\nPlease try to rename files from your another account.\nBecause this BOT can't rename file sent by some ids.\n\nIf you are an **ADMIN** Don't worry ! here we have a solution for you dear {message.from_user.first_name }.\n\nPlease use \n👉 `/addpremium your_other_userid` 👈 to use premium feautres\n\n",
                                   reply_markup=InlineKeyboardMarkup([
-                                                                     [InlineKeyboardButton("🦋 Contact LazyDeveloper 🦋", url='https://telegram.me/mRiDerDM')],
-                                                                     InlineKeyboardButton("  Support Group 🦋", url='https://t.me/LazyPrincessSupport')],
+                                                                     [InlineKeyboardButton("🦋 Contact Developer 🦋", url='https://telegram.me/mister_invisible')],
+                                                                     InlineKeyboardButton("  Support Group 🦋", url='https://t.me/mr_invisible_bots_support')],
                                                                     ]))
         await message.reply_text(text=f"🦋")
         return 
